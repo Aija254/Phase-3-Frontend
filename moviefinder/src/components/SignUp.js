@@ -38,53 +38,51 @@ function SignUp() {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <h1>Movie</h1>
-        </div>
-        <Form size="large" onSubmit={handleSubmit}>
-          <Header as="h3" textAlign="left" color="black">
-            Create Account
-          </Header>
-          <Form.Group widths="equal">
-            <Form.Field>
-              <label>Name</label>
-              <Form.Input
-                fluid
-                placeholder="First Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </Form.Field>
-          </Form.Group>
-          <Form.Group widths="equal">
-            <Form.Field width={12}>
-              <label>Email</label>
-              <Form.Input
-                fluid
-                placeholder="example@example.com"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Field>
-          </Form.Group>
+    <div className="login-form-container">
+      <div className="form-header">
+        <h1>Movie</h1>
+      </div>
+      <Form size="large" onSubmit={handleSubmit}>
+        <Header as="h3" textAlign="left" color="black">
+          Create Account
+        </Header>
+        <Form.Group widths="equal">
           <Form.Field>
-            <label>Password</label>
+            <label>Name</label>
             <Form.Input
               fluid
-              placeholder="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              placeholder="First Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </Form.Field>
-          <Button color="brown" fluid size="large" type="submit">
-            Sign Up
-          </Button>
-        </Form>
-      </div>
+        </Form.Group>
+        <Form.Group widths="equal">
+          <Form.Field width={12}>
+            <label>Email</label>
+            <Form.Input
+              fluid
+              placeholder="example@example.com"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Field>
+        </Form.Group>
+        <Form.Field>
+          <label>Password</label>
+          <Form.Input
+            fluid
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </Form.Field>
+        <Button color="brown" fluid size="large" type="submit">
+          Sign Up
+        </Button>
+      </Form>
     </div>
   );
 }

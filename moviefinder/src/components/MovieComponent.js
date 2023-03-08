@@ -28,17 +28,24 @@ function MovieComponent(props) {
   };
 
   return (
-    <div>
-      <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <div style={{ margin: "20px" }}>
         <span>
           <h4>Title: {props.title}</h4>
         </span>
       </div>
-      <div className="">
+      <div className="" style={{ margin: "20px" }}>
         <span>
           <h4>Year</h4>
         </span>
-        <p className="ui segment">{props.year}</p>
+        <p
+          className="ui segment"
+          style={{ padding: "10px", width: "100px", textAlign: "center" }}
+        >
+          {props.year}
+        </p>
       </div>
     </div>
   );

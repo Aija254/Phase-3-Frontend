@@ -16,7 +16,7 @@ function CreateMovie({ user_id }) {
       },
       body: JSON.stringify({
         title,
-        year: year,
+        year,
         user_id: token,
       }),
     })
@@ -38,37 +38,101 @@ function CreateMovie({ user_id }) {
 
   return (
     <>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: "50px",
+        }}
+      >
         <div>
-          <h3 className="ui black header">Create Movie</h3>
+          <h3
+            className="ui black header"
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              marginBottom: "20px",
+            }}
+          >
+            Create Movie
+          </h3>
         </div>
 
-        <form class="ui form" onSubmit={handleSubmit}>
-          <div class="field">
-            <label>Title</label>
-            <div class="ui fluid input">
+        <form
+          className="ui form"
+          onSubmit={handleSubmit}
+          style={{ width: "100%" }}
+        >
+          <div className="field" style={{ marginBottom: "20px" }}>
+            <label
+              style={{
+                fontSize: "16px",
+                fontWeight: "bold",
+                marginBottom: "10px",
+              }}
+            >
+              Title
+            </label>
+            <div className="ui fluid input">
               <input
                 type="text"
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="E.g The Mafia"
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  boxSizing: "border-box",
+                  fontSize: "16px",
+                }}
               />
             </div>
           </div>
-          <div class="field">
-            <label>Year</label>
-            <div class="ui fluid input">
+          <div className="field" style={{ marginBottom: "20px" }}>
+            <label
+              style={{
+                fontSize: "16px",
+                fontWeight: "bold",
+                marginBottom: "10px",
+              }}
+            >
+              Year
+            </label>
+            <div className="ui fluid input">
               <input
-                type="date"
-                id="dueDate"
+                type="text"
+                id="year"
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
-                placeholder="E.g, 12 / 12/ 2023"
+                placeholder="E.g, 2023"
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  boxSizing: "border-box",
+                  fontSize: "16px",
+                }}
               />
             </div>
           </div>
-          <button class="ui black button" type="submit">
+          <button
+            className="ui black button"
+            type="submit"
+            style={{
+              backgroundColor: "#000",
+              color: "#fff",
+              padding: "12px 20px",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
             Create Movie
           </button>
         </form>
