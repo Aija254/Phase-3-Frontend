@@ -7,3 +7,4 @@ Clone the repository to your local machine.
 Navigate to the frontend directory.
 Install the required packages by running npm install.
 Start the frontend server by running npm start.
+Then in the terminal got to:"  http://localhost:3000/signup "
